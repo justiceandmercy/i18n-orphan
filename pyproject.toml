@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "i18n-orphan"
+version = "0.1.0"
+description = "Find unused and missing i18n translation keys."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "i18n-orphan contributors" }]
+
+[project.scripts]
+i18n-orphan = "i18n_orphan.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["i18n_orphan*"]
